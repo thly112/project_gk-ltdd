@@ -73,8 +73,8 @@ public class RegisterActivity extends AppCompatActivity {
         String gender = selectedGender.getText().toString();
 
         // Chuyển sang màn hình OTP Verification
-        Intent intent = new Intent(RegisterActivity.this, OtpVerificationActivity.class);
-        intent.putExtra("email", email); // Gửi email sang OTP Verification nếu cần
-        startActivity(intent);
+//        Intent intent = new Intent(RegisterActivity.this, OtpVerificationActivity.class);
+//        intent.putExtra("email", email); // Gửi email sang OTP Verification nếu cần
+//        startActivity(intent);
     }
 }

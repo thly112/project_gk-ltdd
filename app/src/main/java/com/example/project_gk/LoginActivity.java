@@ -1,6 +1,7 @@
 package com.example.project_gk;
-
+// 22110457 _ Nguyễn Vương Việt
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         tvRegister = findViewById(R.id.tvRegister);
 
         btnLogin.setOnClickListener(view -> loginUser());
+
         tvRegister.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(intent);
@@ -43,6 +45,14 @@ public class LoginActivity extends AppCompatActivity {
         btnGoogle.setOnClickListener(view ->
                 Toast.makeText(LoginActivity.this, "Đăng nhập bằng Google", Toast.LENGTH_SHORT).show()
         );
+    }
+
+    private void saveLoginState(String username) {
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("USERNAME", username);
+        editor.putBoolean("isLoggedIn", true); // Đánh dấu đã đăng nhập
+        editor.apply();
     }
 
     private void loginUser() {
@@ -67,6 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (apiResponse.getStatus()) {
                         User user = apiResponse.getBody();
                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công!", Toast.LENGTH_SHORT).show();
+                        saveLoginState(user.getName());
                         // Chuyển sang MainActivity
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("USER_NAME", user.getName());
@@ -85,6 +96,5 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
 
 }
