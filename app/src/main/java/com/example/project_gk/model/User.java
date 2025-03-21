@@ -1,4 +1,4 @@
-package com.example.project_gk;
+package com.example.project_gk.model;
 
 public class User {
     private int id;

@@ -1,4 +1,4 @@
-package com.example.project_gk;
+package com.example.project_gk.api;
 
 public class ApiResponse<T> {
     private Boolean status;
