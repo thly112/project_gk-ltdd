@@ -1,4 +1,5 @@
 package com.example.project_gk;
 
-public class RegisterActivity {
+import androidx.appcompat.app.AppCompatActivity;
+public class RegisterActivity extends AppCompatActivity {
 }
