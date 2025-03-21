@@ -1,5 +1,4 @@
 package com.example.project_gk.adapter;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,7 @@ import com.example.project_gk.model.Category;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
+// 22110456 Do Quoc Viet
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
     private Context context;
     private List<Category> categories;
