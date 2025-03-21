@@ -40,7 +40,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
         app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
@@ -69,7 +68,11 @@
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="457dp">
+        tools:layout_editor_absoluteY="451dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
 
         <ImageView
             android:layout_width="24dp"
@@ -83,7 +86,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:hint="Email"
-            android:inputType="textPassword"
+            android:inputType="textEmailAddress"
             android:paddingStart="12dp" />
     </LinearLayout>
 
@@ -95,7 +98,10 @@
         android:orientation="horizontal"
         android:paddingHorizontal="10dp"
         tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="523dp">
+        tools:layout_editor_absoluteY="523dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="24dp"
@@ -179,14 +185,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
 
             <RadioButton
                 android:id="@+id/radioOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Other"
-                android:textSize="14dp" />
+                android:textSize="14dp"
+                />
         </RadioGroup>
     </LinearLayout>
 
@@ -199,6 +208,7 @@
         android:background="@android:color/transparent"
         android:scaleType="centerInside"
         android:src="@drawable/btn_arrow2"
+        android:contentDescription="Đăng ký tài khoản"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutGender" />
 
