@@ -1,5 +1,5 @@
 package com.example.project_gk.adapter;
-
+// 22110374 Le Lam Luc
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
