@@ -10,6 +10,7 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+//    22110375 Trần Thị Thảo Ly
 public class IntroActivity extends AppCompatActivity {
     private ConstraintLayout btnStart;
 
@@ -25,7 +26,7 @@ public class IntroActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                // Kiểm tra xem người dùng đã đăng nhập chưa
+                // Kiểm tra người dùng đã đăng nhập chưa
                 SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
                 boolean isLoggedIn = sharedPreferences.getBoolean("isLoggedIn", false);
 

@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".IntroActivity">
 
-
+<!-- 22110375 Trần Thị Thảo Ly -->
     <ImageView
         android:id="@+id/iv_background"
         android:layout_width="match_parent"
